@@ -1,0 +1,43 @@
+66-1 Module Introduction and What is Server
+
+What is ExpressJs ?
+Ans: express js is a framework of nodejs. that helps write complext code easily
+
+66-2 Client and Server Connection with Request and response
+
+66-3 Node vs other languages. How does node js work
+
+nodejs is not a programming language its Server site runtime
+
+66-4 What is node js and Express js and why use them
+
+features of nodejs:
+1. Fast data
+2. No buffering
+3. Asynchronous and Event-driven
+4. Signle threaded but Highly scalable
+5. cross-platform compitibility
+6. uses javascript
+
+* To Create backend server the languages (mostly used)
+1. Java
+2. .Net
+3. C#
+4. python itsap
+
+66-5 What is Database, DBMS (DataBase Manegement System), MongoDB, NoSQL vs SQL
+
+Structured Query Language (SQL): SQL e data gulan ekta TABLE er akare thake and structured way te thake.
+
+MongoDB is a NoSQL Database Manegement System;
+[{}]
+[] = collection bole
+{} = docuement bole
+
+
+66-6 (Recap) install node-express and use fetch to load data
+
+i. "start": "node index.js" - eta scripts e add korte hobe
+ii. npm i express cors
+iii. create - .gitignore 
+iv. ekbar - git init [command ta ta run kora lagbe taholei node_modules likha ta dim hoye jabe]
