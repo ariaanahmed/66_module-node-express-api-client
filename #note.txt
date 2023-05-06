@@ -41,3 +41,13 @@ i. "start": "node index.js" - eta scripts e add korte hobe
 ii. npm i express cors
 iii. create - .gitignore 
 iv. ekbar - git init [command ta ta run kora lagbe taholei node_modules likha ta dim hoye jabe]
+
+
+66-7 Create React form and Post API and send data to the server
+
+[git a prothom dui ta command ke alada alada likhte hobe and seser char ta ek sathe korlei hobe.]
+
+send an object to server (steps)
+i. create a post on the server side
+ii. from client site send data via post
+    google - fetch send json data - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
