@@ -51,3 +51,13 @@ send an object to server (steps)
 i. create a post on the server side
 ii. from client site send data via post
     google - fetch send json data - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+iii. set fetch method inside the fetch options (second parameter)
+iv. options will have three things: method
+v. options will have headers: 'content-type': 'application/json'
+vi. don't forget to send data by JSON.stringify in the body
+vii. on the server site dont forget to use 'express.json()'
+
+
+66-8 Send Client data to the server and display data on the client
+
+66-9 module summary

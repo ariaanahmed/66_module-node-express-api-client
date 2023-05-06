@@ -2,36 +2,39 @@ import React, { useEffect, useState } from 'react';
 
 const App = () => {
 
-  const [users, setUsers] = useState([])
+  const [users, setUser] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/users').then((res) => res.json()).then((data) => setUsers(data)).catch((error) => {
+    fetch('http://localhost:5000/users').then((res) => res.json()).then((data) => setUser(data)).catch((error) => {
       console.log(error)
     })
   }, [])
 
-
   const handleAddUser = (event) => {
     event.preventDefault();
+
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
-    console.log(name, email);
-    
-    const user = {name, email};
-    
-    console.log(user);
+    const user = { name, email }
+    console.log(user)
 
-    fetch('http://localhost:3000/users', {
-      method: 'POST',
+    fetch('http://localhost:5000/users', {
+      method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json"
       },
       body: JSON.stringify(user)
-    })
-    
-  }
 
+    }).then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        const newUser = [...users, data]
+        setUser(newUser)
+      }).catch((error) => {
+        console.log(error)
+      })
+  }
 
   return (
     <>
@@ -44,12 +47,12 @@ const App = () => {
         <input type="submit" value="Add User" />
       </form>
 
-
       <div>
         {
-          users.map((user) => <p key={user.id}>{user.id}. {user.name} - {user.email}</p>)
+          users.map((user) => <p key={user.id}> {user.id} {user.name} {user.email} </p>)
         }
       </div>
+
     </>
   );
 };
