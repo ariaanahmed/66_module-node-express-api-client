@@ -26,14 +26,10 @@ const App = () => {
       },
       body: JSON.stringify(user)
 
-    }).then((res) => res.json())
-      .then((data) => {
-        console.log(data)
-        const newUser = [...users, data]
-        setUser(newUser)
-      }).catch((error) => {
-        console.log(error)
-      })
+    }).then((res) => res.json()).then((data) => {
+      const newUser = [...users, data];
+      setUser(newUser)
+    })
   }
 
   return (
